@@ -15,3 +15,46 @@ function highlightActiveLink()
         }
     }
 }
+
+
+function FilterPosts()
+{
+    var posts = document.querySelectorAll('ul li');
+    var postList = [];
+    for (let i = 0; i < posts.length; i++)
+    {
+        postList.push(posts[i].innerText);
+    }
+
+    var inputFields = document.querySelector('input');
+    var noResultsMessage = document.getElementById('no-results');
+
+    inputFields.addEventListener('input', function() {
+        const searchText = inputFields.value.toLowerCase(); 
+        let hasMatches = false;
+
+        const filteredList = postList.filter(post => {
+            return post.toLowerCase().includes(searchText);
+        });
+
+        posts.forEach(li => {
+            const text = li.innerText.toLowerCase();
+            if (text.includes(searchText)) {
+                li.style.display = ""; 
+                hasMatches = true;
+            } 
+            else {
+                li.style.display = "none";
+            }
+        });
+
+        if (hasMatches) 
+        {
+            noResultsMessage.style.display = "none";
+        } 
+        else 
+        {
+            noResultsMessage.style.display = "block";
+        }
+    });
+}

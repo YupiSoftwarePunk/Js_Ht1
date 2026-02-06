@@ -8,7 +8,7 @@
                 "type": "chrome",
                 "request": "launch",
                 "name": "Launch Chrome against localhost",
-                "url": "file:///C:/Users/Denis/Documents/frontendProjcts/Ht_Js1/index.html",
+                "url": "file:///C:/Users/Denis/Documents/frontendProjcts/Js_Ht1/index.html",
                 "webRoot": "${workspaceFolder}"
             }
         ]

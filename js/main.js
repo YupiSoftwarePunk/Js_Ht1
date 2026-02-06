@@ -35,4 +35,6 @@ window.onload = function ()
     footer.textContent = "© 2026 Мистер Денискис. Все права защищены. Текущая дата: " + formattedDate;
 
     highlightActiveLink();
+
+    FilterPosts();
 };

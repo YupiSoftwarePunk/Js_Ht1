@@ -33,12 +33,18 @@
                 <input type="text" placeholder="Пост 1">
             </form>
 
-            <ul>
-                <li>Пост 1</li>
-                <li>Пост 2</li>
-                <li>Пост 3</li>
-                <li>Пост 4</li>
-                <li>Пост 5</li>
+            <select id="sort-posts">
+                <option value="default">Без сортировки</option>
+                <option value="date">По дате (сначала новые)</option>
+                <option value="views">По просмотрам</option>
+            </select>
+
+            <ul id="post-list">
+                <li data-date="2023-10-01" data-views="150" data-tags="js, frontend" data-content="Текст о формах">Пост 1</li>
+                <li data-date="2024-01-15" data-views="500" data-tags="html, css" data-content="Текст о верстке">Пост 2</li>
+                <li data-date="2023-12-20" data-views="50" data-tags="life, blog" data-content="Мои мысли сегодня">Пост 3</li>
+                <li data-date="2024-02-01" data-views="300" data-tags="js, react" data-content="Текст про реакт">Пост 4</li>
+                <li data-date="2023-05-10" data-views="1000" data-tags="news" data-content="Важное объявление">Пост 5</li>
             </ul>
             <p id="no-results" style="display: none; color: red;">По вашему запросу ничего не найдено</p>
         </main>
